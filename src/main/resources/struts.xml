@@ -109,8 +109,8 @@
     
             <constant name="struts.mail.host" value="smtp.gmail.com" />
 			<constant name="struts.mail.port" value="587" />
-			<constant name="struts.mail.username" value="astighfar2000@gmail.com" />
-			<constant name="struts.mail.password" value="lcxgvbjgjhmzdjee" />
+			<constant name="struts.mail.username" value="" />
+			<constant name="struts.mail.password" value="" />
 </struts>
 
 
