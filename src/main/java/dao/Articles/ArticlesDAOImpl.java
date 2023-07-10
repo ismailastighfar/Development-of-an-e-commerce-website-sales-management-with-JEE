@@ -8,6 +8,7 @@ import javax.persistence.Query;
 
 import entities.ArticlesStock;
 
+
 public class ArticlesDAOImpl implements IArticlesDAO {
 	
 	@PersistenceContext
@@ -44,4 +45,16 @@ public class ArticlesDAOImpl implements IArticlesDAO {
 		eManager.merge(Art);
 	}
 
-}
+	@Override
+	public ArticlesStock getArticleByName(String nomArt) {
+		  Query req = eManager.createQuery("SELECT Art from ArticlesStock Art WHERE Art.nomArt = :nomArt");
+		    req.setParameter("nomArt", nomArt);
+		    List<ArticlesStock> articlesStocks= req.getResultList();
+		    if (articlesStocks.isEmpty()) {
+		        return null;
+		    }
+		    return articlesStocks.get(0);
+		}
+	}
+
+

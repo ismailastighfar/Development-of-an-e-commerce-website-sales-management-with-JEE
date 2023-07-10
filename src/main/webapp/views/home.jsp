@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s" %>    
+<%@ page import="java.io.*,java.util.*, javax.servlet.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,14 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     
 </head>
+
+<%
+    
+    if (session == null || session.getAttribute("loggedInUser") == null) {
+        response.sendRedirect("http://localhost:8081/rayban/");
+    }
+%>
+
 <body>
     <section class="main">
    <header>

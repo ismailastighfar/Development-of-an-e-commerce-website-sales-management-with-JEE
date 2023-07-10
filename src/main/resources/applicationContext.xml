@@ -26,6 +26,25 @@
 	    <property name="cmddao" ref="cmddao"></property>
 	</bean>
 	
+	<bean id="emailService" class="service.EmailService" />
+
+	<bean id="authAction" class="web.AuthAction">
+	    <!-- Inject the email service -->
+	    <property name="emailService" ref="emailService" />
+	</bean>
+	
+
+	<bean id="admin" class="web.Admin">
+	    <!-- Inject the email service -->
+	    <property name="emailService" ref="emailService" />
+	</bean>
+	
+	
+	<bean id="ArtCmd" class="web.ArticlesAction">
+	    <!-- Inject the email service -->
+	    <property name="emailService" ref="emailService" />
+	</bean>
+	
 	
 	
 

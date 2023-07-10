@@ -3,7 +3,7 @@
         "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
-
+    
 <struts>
     <package name="default" namespace="/" extends="struts-default">
     <default-action-ref name="index"/>
@@ -19,6 +19,7 @@
             <result name="success">views/home.jsp</result>
             <result name="input">views/index.jsp</result>
             <result name="error">views/index.jsp</result>
+             <result name="admin">views/Admin/home.jsp</result>
         </action>
         <action name="register" class="web.AuthAction" method="register">
               <result name="success">views/index.jsp</result>
@@ -46,7 +47,7 @@
         
            <action name="confirmCmd" class="web.ArticlesAction" method="confirmCmd">
             <result name="success">views/facture.jsp</result>
-            <result name="input">views/facture.jsp</result>
+            <result name="input">views/command.jsp</result>
         </action>
   
         <action name="Home">
@@ -56,7 +57,62 @@
          <action name="Profile">
             <result>views/profile.jsp </result>
         </action>
+        
+        
+        
+        
+          <action name="usersList" class="web.Admin" method="indexUser">
+          <result name="success">views/Admin/user/usersList.jsp</result>
+           </action>
+          <action name="deleteUser" class="web.Admin" method="deleteUser">
+          <result name="success">views/Admin/user/usersList.jsp</result> 
+          </action>
+    
+          <action name="cmdList" class="web.Admin" method="indexCmd">
+          <result name="success">views/Admin/command/commandList.jsp</result>
+           </action>
+          <action name="deleteCmd" class="web.Admin" method="deleteCmd">
+          <result name="success">views/Admin/command/commandList.jsp</result> 
+          </action>
+          
+           <action name="artList" class="web.Admin" method="indexArt">
+          <result name="success">views/Admin/product/productList.jsp</result>
+           </action>
+          <action name="deleteArt" class="web.Admin" method="deleteArt">
+          <result name="success">views/Admin/product/productList.jsp</result> 
+          </action>
+          
+            <action name="addArt" class="web.Admin" method="addArt">
+          <result name="success">views/Admin/product/productList.jsp</result> 
+          <result name="error">views/Admin/product/addProduct.jsp</result> 
+          </action>
+          
+            <action name="editArticle" class="web.Admin" method="editArt">
+          <result name="success">views/Admin/product/productList.jsp</result> 
+            <result name="error">views/Admin/product/editProduct.jsp</result> 
+          </action>
+          
+           <action name="product" >
+          <result>views/Admin/product/addProduct.jsp</result> 
+          </action>
+          
+              <action name="edit" class="web.Admin" method="edit" >
+          <result  name="success">views/Admin/product/editProduct.jsp</result> 
+          </action>
+          
+          
+			          
+          
+    
       
     </package>
+    
+            <constant name="struts.mail.host" value="smtp.gmail.com" />
+			<constant name="struts.mail.port" value="587" />
+			<constant name="struts.mail.username" value="astighfar2000@gmail.com" />
+			<constant name="struts.mail.password" value="lcxgvbjgjhmzdjee" />
 </struts>
+
+
+
 

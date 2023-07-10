@@ -66,4 +66,12 @@ public class UsersServiceImpl implements IUsersService{
 		return userdao.getUserBYlogin(login);
 	}
 
+
+
+	@Override
+	public Users getUserByEmail(String email) {
+		
+		return userdao.getUserByEmail(email);
+	}
+
 }

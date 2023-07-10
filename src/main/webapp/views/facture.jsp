@@ -6,9 +6,9 @@
 <html>
 <head>
     <title>Invoice</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     
     <!-- these js files are used for making PDF -->
@@ -29,13 +29,20 @@
 <% 
 
 String client=request.getParameter("commandes.client"); 
-String codeCmd=request.getParameter("commandes.codeCmd"); 
 String codePdt=request.getParameter("commandes.codeArt"); 
 String nomPdt=request.getParameter("article.nomArt"); 
 String prixPdt=request.getParameter("article.prixArt"); 
 String prixtt=request.getParameter("prixtotal"); 
-String dateCmd=request.getParameter("commandes.dateCmd");
-String qteCmd=request.getParameter("commandes.qteCmd"); 
+String dateCmd=request.getParameter("date");
+String qteCmd=request.getParameter("commandes.qteCmd");
+String paymentMethod = request.getParameter("selectedPaymentMethod");
+%>
+
+<%
+    
+    if (session == null || session.getAttribute("loggedInUser") == null) {
+        response.sendRedirect("http://localhost:8081/rayban/");
+    }
 %>
 
 
@@ -52,7 +59,8 @@ String qteCmd=request.getParameter("commandes.qteCmd");
     			<div class="col-xs-6">
     				<address>
     					<strong>Payment method</strong><br>
-    					MasterCard **** 4242<br>
+    					<%=paymentMethod %><br>
+    					<strong>Client</strong><br>
     					<%=client %>
     				</address>
     			</div>

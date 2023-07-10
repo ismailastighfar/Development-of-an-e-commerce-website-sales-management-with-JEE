@@ -62,6 +62,19 @@ public class UsersDAOImpl implements IUsersDAO {
 		    }
 		    return users.get(0);
 		}
+
+	@Override
+	public Users getUserByEmail(String email) {
+		  Query req = eManager.createQuery("SELECT u FROM Users u WHERE u.email = :email");
+		    req.setParameter("email", email);
+		    List<Users> users = req.getResultList();
+		    if (users.isEmpty()) {
+		        return null;
+		    }
+		    return users.get(0);
+	}
+	
+	
 	}
 
 	

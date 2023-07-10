@@ -1,9 +1,4 @@
 body{
-    display: flex;
-    padding: 0 20px;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
     background:  radial-gradient(#f0483a,#d10a20);
 }
 
@@ -19,7 +14,10 @@ header{
     z-index: 1000;
 }
 
-.btn{
+
+
+
+.btnn{
     position: relative;
     display: flex;
     padding: 10px 25px;
@@ -33,7 +31,7 @@ header{
     margin-left: 30px;
 }
 
-.btn:hover{
+.btnn:hover{
     background:#f0483a;
     color: #fff;
 }
@@ -42,15 +40,15 @@ header{
     max-width: 90px;
 }
 
-.navigation {
+.navigationn {
     display: flex;
 }
 
-.navigation li{
+.navigationn li{
     list-style: none;
 }
 
-.navigation li a{
+.navigationn li a{
     position: relative;
     color: #fff;
     text-decoration: none;
@@ -61,70 +59,4 @@ header{
 
 
 
-.wrapper{
-    max-width: 1130px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top:150px;
-}
 
-.wrapper .card{
-    width: calc(33% - 13px);
-    border-radius: 3px;
-    background: #fff;
-}
-
-.wrapper .card img{
-    width: 100%;
-    border-radius: 3px;
-}
-
-.wrapper .card .content{
-    padding: 10px 20px 22px 20px;
-}
-
-.card .content .row,
-.card .content .buttons{
-    display: flex;
-    justify-content: space-between;
-}
-
-.content .row .details span{
-    font-size: 22px;
-    font-weight: 500;
-}
-
-.content .row .details p{
-    color: #333;
-    font-size: 17px;
-    font-weight: 400;
-}
-
-.content .row .price{
-    font-size: 25px;
-    font-weight: 600;
-    color: #d10a20;
-}
-
-.content .buttons{
-    margin-left: 100px;
-}
-
-.content .buttons .button{
-     position: relative;
-    display: inline-block;
-    padding: 20px 50px;
-    background: #d10a20;
-    color: #fff;
-    font-size: 1.1em;
-    font-weight: 500;
-    border-radius: 40px;
-    text-decoration: none;
-    transition: 0.25s;
-}
-
-.buttons .button:hover{
-    color: #fff;
-    background: #f0483a;
-}

@@ -13,6 +13,7 @@ public interface IUsersDAO {
 	public int addUsers(Users u);
 	public Users getUser (int codeUser);
 	public Users getUserBYlogin (String login);
+	public Users getUserByEmail (String email);
 	public void deleteUser(int codeUser);
 
 }

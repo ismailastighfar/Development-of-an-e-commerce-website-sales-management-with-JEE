@@ -12,15 +12,17 @@ public class Users {
 	private int codeUser;
 	private  String login;
 	private  String pass;
+	private String email;
 	
 	public Users() {
 		super();
 	}
-	public Users(int codeUser, String login, String pass) {
+	public Users(int codeUser, String login, String pass,String email) {
 		super();
 		this.codeUser = codeUser;
 		this.login = login;
 		this.pass = pass;
+		this.email = email;
 	}
 	public int getCodeUser() {
 		return codeUser;
@@ -39,6 +41,12 @@ public class Users {
 	}
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }

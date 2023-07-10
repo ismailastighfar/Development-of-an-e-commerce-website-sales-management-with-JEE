@@ -51,4 +51,10 @@ public class ArticlesServiceImpl implements IArticlesService {
 		
 	}
 
+	@Override
+	public ArticlesStock getArticleByName(String nomArt) {
+		
+		return dao.getArticleByName(nomArt);
+	}
+
 }
