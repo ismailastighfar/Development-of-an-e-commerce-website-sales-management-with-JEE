@@ -13,8 +13,8 @@ import java.util.Properties;
 @Service
 public class EmailService {
 	
-    private final String username = "astighfar2000@gmail.com"; // replace with your email address
-    private final String password = "lcxgvbjgjhmzdjee"; // replace with your email password
+    private final String username = ""; // replace with your email address
+    private final String password = ""; // replace with your email password
 
     public void sendWelcomeEmail( Users user) throws MessagingException {
         String subject = "Welcome to RayBan";
