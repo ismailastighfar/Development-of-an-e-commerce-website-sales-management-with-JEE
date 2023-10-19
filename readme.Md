@@ -11,6 +11,6 @@
 </div>
 
 <h2>Application Demo Link</h2>
-<a href="https://youtu.be/VlpVKCdpfiU"/>
+<a href="https://youtu.be/SokU3pc6vAM?si=_alhbvO49TzsrLD4"/>
 <img src="https://img.shields.io/badge/youtube-red?logo=youtube"/>
 </a>
